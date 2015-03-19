@@ -195,11 +195,11 @@ static volatile struct stm32_usart_regs	*usart_regs;
  * Console port resources 
  */
 static struct stm32f2_gpio_dsc	tx_gpio = { USART_TX_IO_PORT,
-					    					USART_TX_IO_PIN,
-					    					STM32F2_GPIO_ROLE_USART3 };
+					    USART_TX_IO_PIN,
+					    STM32F2_GPIO_ROLE_USART1 };
 static struct stm32f2_gpio_dsc	rx_gpio = { USART_RX_IO_PORT,
-					    					USART_RX_IO_PIN,
-					    					STM32F2_GPIO_ROLE_USART3 };
+					    USART_RX_IO_PIN,
+					    STM32F2_GPIO_ROLE_USART1 };
 /*
  * Initialize the serial port.
  */
