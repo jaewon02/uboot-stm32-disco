@@ -260,14 +260,13 @@
 /*
  * Short-cuts to some useful commands (macros)
  */
-#define CONFIG_EXTRA_ENV_SETTINGS				\
-	"loadaddr=0x90000000\0"						\
-	"addip=setenv bootargs ${bootargs}\0"		\
-	"flashaddr=08020000\0"						\
+#define CONFIG_EXTRA_ENV_SETTINGS					\
+	"addip=setenv bootargs ${bootargs}\0"				\
+	"flashaddr=0x40007FC0\0"					\
 	"flashboot=run addip;bootm ${flashaddr}\0"	\
-	"image=uImage\0"							\
-	"stdin=serial\0"							\
-	"stdout=serial\0"							\
+	"image=uImage\0"						\
+	"stdin=serial\0"						\
+	"stdout=serial\0"						\
 	"stderr=serial\0"
 
 /*
