@@ -263,8 +263,8 @@
 #define CONFIG_EXTRA_ENV_SETTINGS				\
 	"loadaddr=0x90000000\0"						\
 	"addip=setenv bootargs ${bootargs}\0"		\
-	"flashaddr=08020000\0"						\
-	"flashboot=run addip;bootm ${flashaddr}\0"	\
+	"flashaddr=90007FC0\0"						\
+	"flashboot=run addip;cp 0x08020000 0x90007FC0 0xF0;bootm ${flashaddr}\0"	\
 	"image=uImage\0"							\
 	"stdin=serial\0"							\
 	"stdout=serial\0"							\
