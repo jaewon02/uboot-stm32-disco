@@ -86,7 +86,7 @@ int arch_cpu_init(void)
 	 * Use start of the external RAM for that;
 	 * kernel resides at offset 0x8000 in the external RAM.
 	 */
-	gd->bd->bi_boot_params = CONFIG_SYS_RAM_BASE;
+	gd->bd->bi_boot_params = CONFIG_SYS_RAM_BASE + 0x100;
 
         return 0;
 }
