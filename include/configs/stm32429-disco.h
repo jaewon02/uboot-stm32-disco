@@ -248,10 +248,10 @@
  */
 #define CONFIG_BOOTDELAY		0
 #define CONFIG_HOSTNAME			stm32429-disco
-#define CONFIG_BOOTARGS			"stm32_platform=stm32429-disco mem=7M "\
-								"console=ttyS2,115200n8 consoleblank=0 "\
-								"root=/dev/mtdblock0 rdinit=/sbin/init "\
-								"video=vfb:enable,fbmem:0x90700000,fbsize:0x100000"
+#define CONFIG_BOOTARGS			"stm32_platform=stm32429-disco mem=8M "\
+							"console=ttyS0,115200n8 consoleblank=0 "\
+							"root=/dev/ram rdinit=/sbin/init "\
+							"video=vfb:enable,fbmem:0x90700000,fbsize:0x100000"
 #define CONFIG_BOOTCOMMAND		"run flashboot"
 
 #define CONFIG_SYS_CONSOLE_IS_IN_ENV
