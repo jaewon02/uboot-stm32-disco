@@ -35,6 +35,17 @@ DECLARE_GLOBAL_DATA_PTR;
  */
 int board_init(void)
 {
+	/* Enable power debug */
+	*((volatile uint32_t *)0xe0042004)=0x7;
+
+	/* Enable clocks needed by the Kernel */
+	*(volatile uint32_t *)0x40023840=0x2f;
+	*(volatile uint32_t *)0x40023844=0x4810;
+	*(volatile uint32_t *)0x40023830=0x207411FE;
+
+	/* Reset the timers */
+	*(volatile uint32_t *)0x40023820&=~0xf;
+
 	/*
 	 * Initialize the SDRAM controller
 	 */
