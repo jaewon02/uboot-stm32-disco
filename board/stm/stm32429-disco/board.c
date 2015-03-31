@@ -40,7 +40,8 @@ int board_init(void)
 
 	/* Enable clocks needed by the Kernel */
 	*(volatile uint32_t *)0x40023840=0x2f;
-	*(volatile uint32_t *)0x40023844=0x4810;
+	/* Enable USART1EN, ADC123, SDIO, SYSCFG */
+	*(volatile uint32_t *)0x40023844=0x4F10;
 	*(volatile uint32_t *)0x40023830=0x207411FE;
 
 	/* Reset the timers */
