@@ -39,7 +39,7 @@ int board_init(void)
 	*((volatile uint32_t *)0xe0042004)=0x7;
 
 	/* Enable clocks needed by the Kernel */
-	*(volatile uint32_t *)0x40023840=0x2f;
+	*(volatile uint32_t *)0x40023840=0xE0002F;
 	/* Enable USART1EN, ADC123, SDIO, SYSCFG */
 	*(volatile uint32_t *)0x40023844=0x4F10;
 	*(volatile uint32_t *)0x40023830=0x207411FE;
